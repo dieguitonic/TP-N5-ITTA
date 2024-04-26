@@ -1,52 +1,52 @@
-# Estructura de datos inicial con 5 alumnos ficticios
+# Estructura de datos inicial 
 Datos = {
     "Alumnos": [
         {
             "Nombre": "Juan",
-            "Apellido": "Pérez",
+            "Apellido": "Perez",
             "DNI": "12345678",
             "Fecha de nacimiento": "01/01/2000",
-            "Tutor": "María Pérez",
+            "Tutor": "Maria Perez",
             "Notas": [7, 8, 9],
             "Faltas": 2,
             "amonestaciones": 1
         },
         {
-            "Nombre": "María",
-            "Apellido": "Gómez",
+            "Nombre": "Maria",
+            "Apellido": "Gomez",
             "DNI": "87654321",
             "Fecha de nacimiento": "05/05/2001",
-            "Tutor": "Carlos Gómez",
+            "Tutor": "Carlos Gomez",
             "Notas": [6, 8, 7],
             "Faltas": 3,
             "amonestaciones": 2
         },
         {
             "Nombre": "Pedro",
-            "Apellido": "Rodríguez",
+            "Apellido": "Rodriguez",
             "DNI": "23456789",
             "Fecha de nacimiento": "10/10/1999",
-            "Tutor": "Laura Rodríguez",
+            "Tutor": "Laura Rodriguez",
             "Notas": [9, 9, 8],
             "Faltas": 1,
             "amonestaciones": 0
         },
         {
             "Nombre": "Ana",
-            "Apellido": "López",
+            "Apellido": "Garcia",
             "DNI": "98765432",
             "Fecha de nacimiento": "15/03/2002",
-            "Tutor": "David López",
+            "Tutor": "David Garcia",
             "Notas": [8, 7, 6],
             "Faltas": 4,
             "amonestaciones": 3
         },
         {
             "Nombre": "Carlos",
-            "Apellido": "Martínez",
+            "Apellido": "Bush",
             "DNI": "34567890",
             "Fecha de nacimiento": "20/07/2003",
-            "Tutor": "Elena Martínez",
+            "Tutor": "Elena Bush",
             "Notas": [7, 6, 8],
             "Faltas": 0,
             "amonestaciones": 0
@@ -54,11 +54,11 @@ Datos = {
     ]
 }
 
-# Función para agregar un nuevo alumno
+# Funcion para agregar un nuevo alumno
 def agregar_alumno(datos, alumno):
     datos["Alumnos"].append(alumno)
 
-# Función para expulsar un alumno
+# Funcion para expulsar un alumno
 def expulsar_alumno(datos, dni):
     alumnos = datos["Alumnos"]
     for alumno in alumnos:
@@ -67,10 +67,9 @@ def expulsar_alumno(datos, dni):
             print(f"Alumno con DNI {dni} expulsado.")
             break
     else:
-        print(f"No se encontró ningún alumno con DNI {dni}.")
+        print(f"No se encontro ningun alumno con DNI {dni}.")
 
-# Agregar más funcionalidades según sea necesario
-# Función para mostrar los datos de un alumno específico
+# Funcion para mostrar los datos de un alumno 
 def mostrar_datos_alumno(datos, dni):
     alumnos = datos["Alumnos"]
     for alumno in alumnos:
@@ -80,9 +79,9 @@ def mostrar_datos_alumno(datos, dni):
                 print(f"{clave}: {valor}")
             break
     else:
-        print(f"No se encontró ningún alumno con DNI {dni}.")
+        print(f"No se encontro ningun alumno con DNI {dni}.")
 
-# Función para modificar los datos de un alumno
+# Funcion para modificar los datos de un alumno
 def modificar_datos_alumno(datos, dni, campo, nuevo_valor):
     alumnos = datos["Alumnos"]
     for alumno in alumnos:
@@ -95,20 +94,20 @@ def modificar_datos_alumno(datos, dni, campo, nuevo_valor):
                 print(f"No existe el campo {campo} en los datos del alumno.")
                 break
     else:
-        print(f"No se encontró ningún alumno con DNI {dni}.")
+        print(f"No se encontro ningun alumno con DNI {dni}.")
 
-# Función para mostrar la lista de todos los alumnos
+# Funcion para mostrar la lista de todos los alumnos
 def mostrar_lista_alumnos(datos):
     print("\nLista de alumnos:")
     for alumno in datos["Alumnos"]:
         print(f"{alumno['Nombre']} {alumno['Apellido']} - DNI: {alumno['DNI']}")
 
-# Función para agregar un nuevo alumno
+# Funcion para agregar un nuevo alumno
 def agregar_alumno(datos, nuevo_alumno):
     datos["Alumnos"].append(nuevo_alumno)
     print("Alumno agregado correctamente.")
 
-# Función para expulsar un alumno
+# Funcion para expulsar un alumno
 def expulsar_alumno(datos, dni):
     alumnos = datos["Alumnos"]
     for alumno in alumnos:
@@ -117,19 +116,19 @@ def expulsar_alumno(datos, dni):
             print(f"Alumno con DNI {dni} expulsado.")
             break
     else:
-        print(f"No se encontró ningún alumno con DNI {dni}.")
+        print(f"No se encontro ningun alumno con DNI {dni}.")
 
-# Función principal (menú)
+# Funcion principal (menu).
 def menu_principal(datos):
     while True:
-        print("\n=== Menú Principal ===")
+        print("\n=== Menu Principal ===")
         print("1. Mostrar datos de un alumno")
         print("2. Modificar datos de un alumno")
         print("3. Mostrar lista de alumnos")
         print("4. Agregar nuevo alumno")
         print("5. Expulsar alumno")
         print("6. Salir")
-        opcion = input("Ingrese el número de la opción que desea realizar: ")
+        opcion = input("Ingrese el numero de la opcion que desea realizar: ")
 
         if opcion == "1":
             dni = input("Ingrese el DNI del alumno: ")
@@ -160,7 +159,7 @@ def menu_principal(datos):
             print("Saliendo del programa.")
             break
         else:
-            print("Opción no válida. Por favor, ingrese un número del 1 al 6.")
+            print("Opcion no valida. Por favor, ingrese un numero del 1 al 6.")
 
 # Ejecutar el programa
 menu_principal(Datos)
